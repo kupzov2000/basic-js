@@ -14,19 +14,19 @@ const { NotImplementedError } = require('../lib');
 function deleteDigit(n) {
   const numbers = String(n).split('').map(Number);
 
-  let maxNumber = 0;
+  let maxNumb = 0;
 
   for (let i = 0; i < numbers.length; i++) {
     const copyNumbers = [...numbers];
     copyNumbers.splice(i, 1);
     const currNumb = +copyNumbers.join('');
 
-    if (currNumb > maxNumber) {
-      maxNumber = currNumb;
+    if (currNumb > maxNumb) {
+      maxNumb = currNumb;
     }
   }
 
-  return maxNumber;
+  return maxNumb;
 }
 
 module.exports = {
